@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$small: 12px;
+$primary: #ce1212;
+$font-family-sans-serif: "Inter", "Amatic SC", sans-serif;
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import "./node_modules/animate.css/animate.min.css";
+// ------------ default ---------------
+*,
+body {
+  font-size: 16px;
+}
+.mid-bold {
+  font-weight: 500;
+}
+.up-bold {
+  font-weight: 600;
+}
+.sub-black {
+  color: #212529;
+}
+.link-click {
+  background-color: #f8f1f173;
+  border: none;
+}
+.link-click:hover {
+  background-color: #ffffff;
+  color: rgb(206, 18, 18) !important;
+}
+// ------------ Nav section ------------
+// --font-primary: "Amatic SC", sans-serif;
+// --font-secondary: "Inter", sans-serif;
+.active {
+  color: black;
+  transition: 0.3s;
+  padding-bottom: 3px;
+  border-bottom: 2px solid $primary;
+}
+.nav-link:hover {
+  color: black;
+  padding-bottom: 3px;
+  border-bottom: 2px solid $primary;
+}
+.nav-btn {
+  transition: 0.3s;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.nav-btn:hover {
+  background-color: #ce1212b3;
+  color: white;
+}
+// ------------ Hero Section -----------
+#hero h1 {
+  font-family: "Amatic SC", sans-serif;
+}
+#hero {
+  background-color: #e3e3e3;
+}
+
+// ------------ About Section ----------
+.sec-head {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.sub-sechead,
+.sub-sechead span {
+  font-size: 48px;
+  font-family: "Amatic SC", sans-serif;
+}
+.first-about {
+  background-image: url(./img/about.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.booking {
+  width: 80%;
+  background-color: white;
+  text-align: center;
+  margin-bottom: 95px;
+}
+.about_2 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.main-btn:hover {
+  height: 98px;
+  width: 98px;
+  border-radius: 50%;
+  background: radial-gradient(
+    var(--color-primary) 50%,
+    rgba(206, 18, 18, 0.4) 52%
+  );
+  overflow: hidden;
+  .play {
+    animation: hoverAnime 0.5s ease-in;
+  }
+}
+@keyframes hoverAnime {
+  0% {
+    border-left: 0px solid #ffffff;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    opacity: 1;
+  }
+  50% {
+    border-left: 155px solid #ffffff;
+    border-top: 130px solid transparent;
+    border-bottom: 130px solid transparent;
+    opacity: 0;
+  }
+}
+.main-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    var(--color-primary) 50%,
+    rgba(206, 18, 18, 0.4) 52%
+  );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-btn::before {
+  content: "";
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -999;
+  position: absolute;
+  border: 5px solid rgba(206, 18, 18, 0.172);
+  background: rgba(198, 16, 0, 0.38);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulsate-btn 2s infinite linear;
+}
+.main-btn::after {
+  content: "";
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -999;
+  position: absolute;
+  border: 5px solid rgba(206, 18, 18, 0.172);
+  background: rgba(198, 16, 0, 0.38);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes pulsate-btn {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    width: 41px;
+    height: 41px;
+  }
+}
+.play {
+  border-left: 15px solid #ffffff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-40%) translateY(-50%);
+}
+
+.about-data {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbd5d5;
+}
+.card-data {
+  transition: all 0.3s ease-in-out;
+}
+.card-data:hover {
+  transform: scale(1.08);
+}
+
+// --------- About Section Part - 3 --------
+.last-about {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./img/stats-bg.jpg) no-repeat fixed center !important;
+  background-size: cover;
+}
+
+// ----------- Menu Section ------------
+.menu-item {
+  width: 65%;
+}
+
+// ---------- Menu Filter ------------
+.nav-pills .nav-link:hover {
+  color: #ce1212;
+  padding-bottom: 8px !important;
+  border-bottom: 2px solid #e6e8e6;
+}
+.nav-pills .nav-link {
+  background: none;
+  border-bottom: 2px solid #9d9d9e;
+  border-radius: 0px !important;
+  color: #000000;
+  font-size: 18px;
+}
+.nav-pills .nav-link.active {
+  color: #ce1212;
+  background-color: transparent !important;
+  padding-bottom: 8px !important;
+  border-bottom: 2px solid #ce1212;
+}
+.tab-content > .active {
+  border: none !important;
+}
+.item-img {
+  width: 60%;
+}
+
+// ------------ Testimonials ---------
+#testimonials {
+  background-color: #e3e3e3;
+}
+.quote {
+  color: #f05656 !important;
+}
+.first-testi {
+  border-left: 3px solid $primary;
+}
+.slick-slider {
+  padding: 0 !important;
+}
+.slick-dots li button::before {
+  color: #ce1212 !important;
+  font-size: 16px;
+}
+
+// ------------ Events ----------------
+.event-price-01 {
+  background: linear-gradient(
+      90deg,
+      rgba(2, 1, 33, 0.6587009803921569) 100%,
+      rgba(5, 3, 36, 0.4430147058823529) 100%
+    ),
+    url(./img/events-1.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 449.667px;
+}
+.event-price-02 {
+  background: linear-gradient(
+      90deg,
+      rgba(2, 1, 33, 0.6587009803921569) 100%,
+      rgba(5, 3, 36, 0.4430147058823529) 100%
+    ),
+    url(./img/events-2.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 449.667px;
+}
+.event-price-03 {
+  background: linear-gradient(
+      90deg,
+      rgba(2, 1, 33, 0.6587009803921569) 100%,
+      rgba(5, 3, 36, 0.4430147058823529) 100%
+    ),
+    url(./img/events-3.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 449.667px;
+}
+.event-price-01 h2,
+.event-price-02 h2,
+.event-price-03 h2 {
+  display: inline-block;
+  border-bottom: 2px solid $primary;
+}
+.event-slick .slick-dots {
+  margin-top: -15px !important;
+}
+
+// ------------- Chef Section -------------
+
+.chef {
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s linear;
+}
+.social {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 3%;
+  right: -16%;
+  width: 44px;
+  background-color: #dbdbdf88;
+  backdrop-filter: blur(10px) contrast(130%);
+  transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.social a i {
+  transition: 0.3s linear;
+}
+.social a:hover i {
+  opacity: 0.75 !important;
+}
+.chef:hover .social {
+  right: 5%;
+}
+.chef:hover {
+  transform: scale(1.03);
+}
+.chef-img {
+  position: relative;
+}
+.chef-svg {
+  position: absolute;
+  top: 49%;
+  left: 0;
+  right: 0;
+}
+
+// ---------booking----------
+.input,
+.text-area {
+  border: 1px solid rgb(184, 184, 184);
+  font-size: 14px;
+}
+.input:focus-visible,
+.text-area:focus-visible {
+  outline-color: #ce1212 !important;
+  outline: 0px;
+  border: 1px solid #ce1212 !important;
+}
+.bookATable {
+  padding: 14px 55px;
+}
+
+.centered .slick-slide {
+  margin: 0 12px;
+}
+.centered .slick-current.slick-center {
+  transform: scale(1.3);
+  border: 8px solid #ce1212;
+}
+.swiper {
+  height: 180px;
+  padding: 20px 0;
+  .swiper-slide {
+    // background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.swiper-slide-active {
+  border: 6px solid #ce1212;
+  transform: scale(1.24) !important;
+  padding: 3px;
+  // background-color: #fff !important;
+  z-index: 9999;
+}
+.swipe-div1 {
+  background: url(./img/gallery/gallery-1.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 121.6px;
+}
+.swipe-div2 {
+  background: url(./img/gallery/gallery-2.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 121.6px;
+}
+.swipe-div3 {
+  background: url(./img/gallery/gallery-3.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 121.6px;
+}
+.swipe-div4 {
+  background: url(./img/gallery/gallery-4.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 121.6px;
+}
+.swipe-div5 {
+  background: url(./img/gallery/gallery-5.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 121.6px;
+}
+.swipe-div6 {
+  background: url(./img/gallery/gallery-6.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 121.6px;
+}
+.swipe-div7 {
+  background: url(./img/gallery/gallery-7.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 121.6px;
+}
+.swipe-div8 {
+  background: url(./img/gallery/gallery-8.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 121.6px;
+}
+
+// ----------- Contact
+.contact-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-btn {
+  padding: 14px 40px;
+}
+.contact-btn:hover {
+  background-color: #f05656 !important;
+}
+.social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+}
+.social-btn:hover {
+  cursor: pointer;
+  opacity: 1 !important;
+}

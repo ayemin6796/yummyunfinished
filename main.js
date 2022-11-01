@@ -4,7 +4,6 @@ import ScrollReveal from "scrollreveal";
 import "aos/dist/aos.css";
 import "isotope-layout";
 import "animate.css";
-import "swiper/swiper.scss";
 
 let backBtn = document.querySelector(".back-to-top");
 
@@ -40,8 +39,8 @@ ScrollReveal().reveal(".head-right", {
   reset: false,
 });
 
-// Last About
-let el = document.querySelectorAll(".counter");
+// On DOM ready.
+const el = document.querySelectorAll(".counter");
 new Waypoint({
   element: document.querySelector(".last-about"),
   handler: function () {
@@ -51,8 +50,9 @@ new Waypoint({
         delay: 16,
       });
     });
+    this.destroy();
   },
-  offset: "85%",
+  offset: "bottom-in-view",
 });
 
 //About Section Waypoints
@@ -286,11 +286,9 @@ window.addEventListener("scroll", function () {
   let current = "";
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    console.log(sectionTop);
     const sectionHeight = section.clientHeight;
     if (pageYOffset >= sectionTop - sectionHeight / 4) {
       current = section.getAttribute("id");
-      console.log(current);
     }
   });
 

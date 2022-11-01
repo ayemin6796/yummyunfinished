@@ -14,6 +14,8 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Swiper  -->
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" />
     <!-- slick -->
     <link rel="stylesheet" href="./slick/slick.css" />
     <link rel="stylesheet" href="./slick/slick-theme.css" />
@@ -24,7 +26,23 @@
     <!-- Main css file -->
     <link rel="stylesheet" href="./style.css" />
 
-    <title>Vite App</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta
+      property="og:title"
+      content="Yummy - Bootstrap Restaurant Website Template"
+    />
+    <meta
+      property="og:description"
+      content="Yummy is a clean and lightweight restaurant website template created with the latest version of the Bootstrap framework. It's designed specifically for restaurants, cafes, bakeries, bars, catering, or anyone working in the food industry and is an attractive and effective way to promote your food-related businesses."
+    />
+    <meta
+      property="og:image"
+      content="https://bootstrapmade.com/content/templatefiles/Yummy/Yummy-bootstrap-website-template.avif"
+    />
+
+    <title>Yummy - Bootstrap Restaurant Website Template</title>
   </head>
   <body>
     <!-- Nav bar -->
@@ -143,7 +161,7 @@
             </p>
             <div class="d-lg-flex align-items-center head-left dual-btn">
               <a
-                href="#"
+                href="#booking"
                 class="btn btn-primary rounded-pill mid-bold me-4"
                 style="padding: 10px 32px; font-size: 14px"
                 >Book a Table</a
@@ -1919,6 +1937,7 @@
     <script src="./node_modules/counterup2/dist/index.js"></script>
     <script src="./node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
     <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="./slick/slick.min.js"></script>
     <script src="./node_modules/venobox/dist/venobox.min.js"></script>
 
@@ -1998,10 +2017,6 @@
             // spaceBetween: 20,
             slidesToShow: 1,
             centeredSlides: false,
-            pagination: {
-              el: ".gal-swiper .swiper-pagination",
-              clickable: true,
-            },
           },
         },
       });

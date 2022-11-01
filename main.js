@@ -5,72 +5,35 @@ import "aos/dist/aos.css";
 import "isotope-layout";
 import "animate.css";
 
+let backBtn = document.querySelector(".back-to-top");
+
 let slideUp = {
   distance: "65px",
   duration: 600,
   easing: "ease-in",
   origin: "bottom",
   opacity: null,
+  cleanup: true,
 };
 ScrollReveal({}).reveal("#reveal", slideUp);
 
 // hero-left-section
 ScrollReveal().reveal(".head-left", {
-  distance: "60px",
+  distance: "30px",
   origin: "bottom",
   easing: "ease-in",
   delay: 500,
   interval: 120,
+  cleanup: true,
 });
+
 // hero-right-section
 ScrollReveal().reveal(".head-right", {
   distance: "8px",
   scale: 1.15,
   easing: "ease-in",
   delay: 500,
-});
-
-//About Section Waypoints
-// For heading of about section waypoint
-new Waypoint({
-  element: document.querySelector(".first-container"),
-  handler: function () {
-    ScrollReveal().reveal(".about-head", {
-      distance: "40px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 300,
-    });
-  },
-  offset: "100%",
-});
-new Waypoint({
-  element: document.querySelector(".first-container"),
-  handler: function () {
-    ScrollReveal().reveal(".body-about", {
-      distance: "40px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 500,
-      interval: 120,
-    });
-  },
-  offset: "85%",
-});
-
-// about sec parts
-new Waypoint({
-  element: document.querySelector(".first-container"),
-  handler: function () {
-    ScrollReveal().reveal(".sec-about", {
-      distance: "40px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 600,
-      interval: 150,
-    });
-  },
-  offset: "80%",
+  cleanup: true,
 });
 
 // Last About
@@ -88,6 +51,55 @@ new Waypoint({
   offset: "85%",
 });
 
+//About Section Waypoints
+// For heading of about section waypoint
+
+new Waypoint({
+  element: document.querySelector(".first-container"),
+  handler: function () {
+    ScrollReveal().reveal(".about-head", {
+      distance: "40px",
+      origin: "bottom",
+      easing: "ease-in",
+      delay: 300,
+      interval: 50,
+      cleanup: true,
+    });
+  },
+  offset: "100%",
+});
+
+new Waypoint({
+  element: document.querySelector(".first-container"),
+  handler: function () {
+    ScrollReveal().reveal(".body-about", {
+      distance: "40px",
+      origin: "bottom",
+      easing: "ease-in",
+      delay: 500,
+      interval: 120,
+      cleanup: true,
+    });
+  },
+  offset: "95%",
+});
+
+// about sec parts
+new Waypoint({
+  element: document.querySelector(".first-container"),
+  handler: function () {
+    ScrollReveal().reveal(".sec-about", {
+      distance: "40px",
+      origin: "bottom",
+      easing: "ease-in",
+      delay: 600,
+      interval: 150,
+      cleanup: true,
+    });
+  },
+  offset: "80%",
+});
+
 // Menu Section
 new Waypoint({
   element: document.querySelector(".menu"),
@@ -98,6 +110,7 @@ new Waypoint({
       easing: "ease-in",
       delay: 300,
       interval: 150,
+      cleanup: true,
     });
   },
   offset: "85%",
@@ -113,6 +126,7 @@ new Waypoint({
       easing: "ease-in",
       delay: 300,
       interval: 150,
+      cleanup: true,
     });
   },
   offset: "85%",
@@ -127,6 +141,7 @@ new Waypoint({
       origin: "bottom",
       easing: "ease-in",
       delay: 300,
+      cleanup: true,
     });
   },
   offset: "85%",
@@ -142,6 +157,7 @@ new Waypoint({
       easing: "ease-in",
       delay: 300,
       interval: 150,
+      cleanup: true,
     });
   },
   offset: "85%",
@@ -156,6 +172,7 @@ new Waypoint({
       origin: "bottom",
       easing: "ease-in",
       delay: 350,
+      cleanup: true,
     });
   },
   offset: "90%",
@@ -171,6 +188,7 @@ new Waypoint({
       easing: "ease-in",
       delay: 350,
       interval: 150,
+      cleanup: true,
     });
   },
   offset: "75%",
@@ -186,6 +204,7 @@ new Waypoint({
       easing: "ease-in",
       delay: 350,
       interval: 150,
+      cleanup: true,
     });
   },
   offset: "85%",
@@ -201,6 +220,7 @@ new Waypoint({
       easing: "ease-in",
       delay: 350,
       interval: 150,
+      cleanup: true,
     });
   },
   offset: "75%",
@@ -215,11 +235,162 @@ new Waypoint({
       origin: "bottom",
       easing: "ease-in",
       delay: 350,
+      cleanup: true,
     });
   },
   offset: "85%",
 });
-// Start counting, do this on DOM ready or with Waypoints.
 
+// for book head section
+new Waypoint({
+  element: document.querySelector(".book"),
+  handler: function () {
+    ScrollReveal().reveal(".book-head", {
+      distance: "35px",
+      origin: "bottom",
+      easing: "ease-in",
+      delay: 350,
+      interval: 150,
+      cleanup: true,
+    });
+  },
+  offset: "75%",
+});
+
+// for booking photo
+new Waypoint({
+  element: document.querySelector(".book"),
+  handler: function () {
+    ScrollReveal().reveal(".img-book", {
+      distance: "8px",
+      scale: 1.15,
+      easing: "ease-in",
+      delay: 400,
+      cleanup: true,
+    });
+  },
+  offset: "85%",
+});
+
+// for booking input gp
+new Waypoint({
+  element: document.querySelector(".book"),
+  handler: function () {
+    ScrollReveal().reveal(".book-input", {
+      distance: "35px",
+      origin: "bottom",
+      easing: "ease-in",
+      delay: 400,
+      cleanup: true,
+    });
+  },
+  offset: "85%",
+});
+
+// for gallery head
+new Waypoint({
+  element: document.querySelector(".gallery"),
+  handler: function () {
+    ScrollReveal().reveal(".gal-head", {
+      distance: "35px",
+      origin: "bottom",
+      easing: "ease-in",
+      delay: 350,
+      interval: 150,
+      cleanup: true,
+    });
+  },
+  offset: "75%",
+});
+
+// for gallery carousel
+new Waypoint({
+  element: document.querySelector(".gallery"),
+  handler: function () {
+    ScrollReveal().reveal(".gal-swiper", {
+      distance: "35px",
+      origin: "bottom",
+      easing: "ease-in",
+      delay: 400,
+      cleanup: true,
+    });
+  },
+  offset: "85%",
+});
+
+// for contact head
+new Waypoint({
+  element: document.querySelector(".contact"),
+  handler: function () {
+    ScrollReveal().reveal(".contact-head", {
+      distance: "35px",
+      origin: "bottom",
+      easing: "ease-in",
+      delay: 350,
+      interval: 150,
+      cleanup: true,
+    });
+  },
+  offset: "75%",
+});
+
+// contact-item
+new Waypoint({
+  element: document.querySelector(".contact"),
+  handler: function () {
+    ScrollReveal().reveal(".contact-item", {
+      distance: "35px",
+      origin: "bottom",
+      easing: "ease-in",
+      delay: 400,
+      cleanup: true,
+    });
+  },
+  offset: "85%",
+});
+
+// Back To Top Button
+new Waypoint({
+  element: document.getElementById("about"),
+  handler: function (direction) {
+    if (direction == "down") {
+      backBtn.style.visibility = "visible";
+      backBtn.style.opacity = 1;
+      backBtn.classList.add("animate__fadeInUp");
+    } else {
+      backBtn.classList.replace("animate__fadeInUp", "animate__fadeOutDown");
+      setTimeout(function () {
+        backBtn.classList.remove("animate__fadeOutDown");
+        backBtn.style.visibility = "hidden";
+        backBtn.style.opacity = 0;
+      }, 150);
+    }
+  },
+  offset: "200px",
+});
+
+// navigation active
+const sections = document.querySelectorAll("section");
+const navItem = document.querySelectorAll(".navbar-nav .nav-item .nav-link");
+
+window.addEventListener("scroll", function () {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    console.log(sectionTop);
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 4) {
+      current = section.getAttribute("id");
+      console.log(current);
+    }
+  });
+
+  navItem.forEach((item) => {
+    item.classList.remove("active");
+    if (item.classList.contains(current)) {
+      item.classList.add("active");
+    }
+  });
+});
 // Btn Animation
 let mainBtn = document.querySelector(".main-btn");

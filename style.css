@@ -10781,6 +10781,11 @@ body {
   scroll-behavior: smooth;
 }
 
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
 .mid-bold {
   font-weight: 500;
 }
@@ -11411,6 +11416,11 @@ body {
   font-size: 16px;
 }
 
+@media only screen and (min-width: 1199px) and (max-width: 1399px) {
+  .yummy-spec h4, .yummy-spec .h4 {
+    width: 75%;
+  }
+}
 @media only screen and (min-width: 1121px) {
   .sec-contact {
     margin-bottom: 0px !important;
@@ -11824,12 +11834,14 @@ body {
   .swiper {
     width: 100%;
     height: 100%;
-    padding: 20px 0;
+    overflow: hidden !important;
   }
   .swiper .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0px;
+    margin: 0px;
   }
   .swiper-slide-active {
     border: none !important;

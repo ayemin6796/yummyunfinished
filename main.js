@@ -4,6 +4,7 @@ import ScrollReveal from "scrollreveal";
 import "aos/dist/aos.css";
 import "isotope-layout";
 import "animate.css";
+import "swiper/swiper.scss";
 
 let backBtn = document.querySelector(".back-to-top");
 
@@ -14,6 +15,7 @@ let slideUp = {
   origin: "bottom",
   opacity: null,
   cleanup: true,
+  reset: false,
 };
 ScrollReveal({}).reveal("#reveal", slideUp);
 
@@ -25,6 +27,7 @@ ScrollReveal().reveal(".head-left", {
   delay: 500,
   interval: 120,
   cleanup: true,
+  reset: false,
 });
 
 // hero-right-section
@@ -34,6 +37,7 @@ ScrollReveal().reveal(".head-right", {
   easing: "ease-in",
   delay: 500,
   cleanup: true,
+  reset: false,
 });
 
 // Last About
@@ -54,299 +58,204 @@ new Waypoint({
 //About Section Waypoints
 // For heading of about section waypoint
 
-new Waypoint({
-  element: document.querySelector(".first-container"),
-  handler: function () {
-    ScrollReveal().reveal(".about-head", {
-      distance: "40px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 300,
-      interval: 50,
-      cleanup: true,
-    });
-  },
-  offset: "100%",
+ScrollReveal().reveal(".about-head", {
+  distance: "40px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 300,
+  interval: 50,
+  cleanup: true,
+  reset: false,
 });
 
-new Waypoint({
-  element: document.querySelector(".first-container"),
-  handler: function () {
-    ScrollReveal().reveal(".body-about", {
-      distance: "40px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 500,
-      interval: 120,
-      cleanup: true,
-    });
-  },
-  offset: "95%",
+// about body
+ScrollReveal().reveal(".body-about", {
+  distance: "40px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 500,
+  interval: 120,
+  cleanup: true,
+  reset: false,
 });
 
 // about sec parts
-new Waypoint({
-  element: document.querySelector(".first-container"),
-  handler: function () {
-    ScrollReveal().reveal(".sec-about", {
-      distance: "40px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 600,
-      interval: 150,
-      cleanup: true,
-    });
-  },
-  offset: "80%",
+ScrollReveal().reveal(".sec-about", {
+  distance: "40px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 600,
+  interval: 150,
+  cleanup: true,
+  reset: false,
 });
 
 // Menu Section
-new Waypoint({
-  element: document.querySelector(".menu"),
-  handler: function () {
-    ScrollReveal().reveal(".menu-head", {
-      distance: "28px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 300,
-      interval: 150,
-      cleanup: true,
-    });
-  },
-  offset: "85%",
+ScrollReveal().reveal(".menu-head", {
+  distance: "28px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 300,
+  interval: 150,
+  cleanup: true,
+  reset: false,
 });
 
 // Menu Nav Bar
-new Waypoint({
-  element: document.querySelector(".menu"),
-  handler: function () {
-    ScrollReveal().reveal(".menu-nav", {
-      distance: "28px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 300,
-      interval: 150,
-      cleanup: true,
-    });
-  },
-  offset: "85%",
+ScrollReveal().reveal(".menu-nav", {
+  distance: "28px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 300,
+  interval: 150,
+  cleanup: true,
+  reset: false,
 });
-
 // menu item
-new Waypoint({
-  element: document.querySelector(".menu"),
-  handler: function () {
-    ScrollReveal().reveal(".menu-items", {
-      distance: "28px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 300,
-      cleanup: true,
-    });
-  },
-  offset: "85%",
+ScrollReveal().reveal(".menu-items", {
+  distance: "28px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 300,
+  cleanup: true,
+  reset: false,
 });
 
 // Testimonials
-new Waypoint({
-  element: document.querySelector(".testimonials"),
-  handler: function () {
-    ScrollReveal().reveal(".head-testi", {
-      distance: "28px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 300,
-      interval: 150,
-      cleanup: true,
-    });
-  },
-  offset: "85%",
+ScrollReveal().reveal(".head-testi", {
+  distance: "28px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 300,
+  interval: 150,
+  cleanup: true,
+  reset: false,
 });
 
 // Carousel of testimonials
-new Waypoint({
-  element: document.querySelector(".testimonials"),
-  handler: function () {
-    ScrollReveal().reveal(".testi-carousel", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 350,
-      cleanup: true,
-    });
-  },
-  offset: "90%",
+ScrollReveal().reveal(".testi-carousel", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 350,
+  cleanup: true,
+  reset: false,
 });
 
 // For Events
-new Waypoint({
-  element: document.querySelector(".events"),
-  handler: function () {
-    ScrollReveal().reveal(".head-event", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 350,
-      interval: 150,
-      cleanup: true,
-    });
-  },
-  offset: "75%",
+ScrollReveal().reveal(".head-event", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 350,
+  interval: 150,
+  cleanup: true,
+  reset: false,
 });
 
 // for event-carousel
-new Waypoint({
-  element: document.querySelector(".events"),
-  handler: function () {
-    ScrollReveal().reveal(".event-carousel", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 350,
-      interval: 150,
-      cleanup: true,
-    });
-  },
-  offset: "85%",
+ScrollReveal().reveal(".event-carousel", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 350,
+  interval: 150,
+  cleanup: true,
+  reset: false,
 });
 
 //for chef section
-new Waypoint({
-  element: document.querySelector(".chef-sec"),
-  handler: function () {
-    ScrollReveal().reveal(".chef-head", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 350,
-      interval: 150,
-      cleanup: true,
-    });
-  },
-  offset: "75%",
+ScrollReveal().reveal(".chef-head", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 350,
+  interval: 150,
+  cleanup: true,
+  reset: false,
 });
 
 // chef card section
-new Waypoint({
-  element: document.querySelector(".chef-sec"),
-  handler: function () {
-    ScrollReveal().reveal(".chef", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 350,
-      cleanup: true,
-    });
-  },
-  offset: "85%",
+ScrollReveal().reveal(".chef", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 350,
+  cleanup: true,
+  reset: false,
 });
 
 // for book head section
-new Waypoint({
-  element: document.querySelector(".book"),
-  handler: function () {
-    ScrollReveal().reveal(".book-head", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 350,
-      interval: 150,
-      cleanup: true,
-    });
-  },
-  offset: "75%",
+ScrollReveal().reveal(".book-head", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 350,
+  interval: 150,
+  cleanup: true,
+  reset: false,
 });
 
 // for booking photo
-new Waypoint({
-  element: document.querySelector(".book"),
-  handler: function () {
-    ScrollReveal().reveal(".img-book", {
-      distance: "8px",
-      scale: 1.15,
-      easing: "ease-in",
-      delay: 400,
-      cleanup: true,
-    });
-  },
-  offset: "85%",
+ScrollReveal().reveal(".img-book", {
+  distance: "8px",
+  scale: 1.15,
+  easing: "ease-in",
+  delay: 400,
+  cleanup: true,
+  reset: false,
 });
 
 // for booking input gp
-new Waypoint({
-  element: document.querySelector(".book"),
-  handler: function () {
-    ScrollReveal().reveal(".book-input", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 400,
-      cleanup: true,
-    });
-  },
-  offset: "85%",
+ScrollReveal().reveal(".book-input", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 400,
+  cleanup: true,
+  reset: false,
 });
 
 // for gallery head
-new Waypoint({
-  element: document.querySelector(".gallery"),
-  handler: function () {
-    ScrollReveal().reveal(".gal-head", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 350,
-      interval: 150,
-      cleanup: true,
-    });
-  },
-  offset: "75%",
+ScrollReveal().reveal(".gal-head", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 350,
+  interval: 150,
+  cleanup: true,
+  reset: false,
 });
 
 // for gallery carousel
-new Waypoint({
-  element: document.querySelector(".gallery"),
-  handler: function () {
-    ScrollReveal().reveal(".gal-swiper", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 400,
-      cleanup: true,
-    });
-  },
-  offset: "85%",
+ScrollReveal().reveal(".gal-swiper", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 400,
+  cleanup: true,
+  reset: false,
 });
 
 // for contact head
-new Waypoint({
-  element: document.querySelector(".contact"),
-  handler: function () {
-    ScrollReveal().reveal(".contact-head", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 350,
-      interval: 150,
-      cleanup: true,
-    });
-  },
-  offset: "75%",
+ScrollReveal().reveal(".contact-head", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 350,
+  interval: 150,
+  cleanup: true,
+  reset: false,
 });
 
 // contact-item
-new Waypoint({
-  element: document.querySelector(".contact"),
-  handler: function () {
-    ScrollReveal().reveal(".contact-item", {
-      distance: "35px",
-      origin: "bottom",
-      easing: "ease-in",
-      delay: 400,
-      cleanup: true,
-    });
-  },
-  offset: "85%",
+ScrollReveal().reveal(".contact-item", {
+  distance: "35px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 400,
+  cleanup: true,
+  reset: false,
 });
 
 // Back To Top Button

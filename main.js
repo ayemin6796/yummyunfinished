@@ -1,6 +1,9 @@
 import "./style.scss";
-import counterUp from "counterup2";
+import { counterUp } from "counterup2";
 import ScrollReveal from "scrollreveal";
+import "bootstrap";
+import "venobox";
+import "slick-carousel";
 import "aos/dist/aos.css";
 import "isotope-layout";
 import "animate.css";
@@ -117,6 +120,17 @@ ScrollReveal().reveal(".menu-items", {
   origin: "bottom",
   easing: "ease-in",
   delay: 300,
+  cleanup: true,
+  reset: false,
+});
+
+// Menu dish
+ScrollReveal().reveal(".dish", {
+  distance: "15px",
+  origin: "bottom",
+  easing: "ease-in",
+  delay: 300,
+  interval: 150,
   cleanup: true,
   reset: false,
 });

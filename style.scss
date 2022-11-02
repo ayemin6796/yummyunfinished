@@ -8,6 +8,7 @@ $font-family-sans-serif: "Inter", "Amatic SC", sans-serif;
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 @import "./node_modules/animate.css/animate.min.css";
 @import "./node_modules/venobox/dist/venobox.min.css";
+@import "./node_modules/swiper/swiper.scss";
 // ------------ default ---------------
 *,
 body {
@@ -1038,9 +1039,7 @@ body {
   .counter {
     font-size: 45px !important;
   }
-  // Menu
-  .nav-pills .nav-link {
-  }
+
   .menu-items .sec-head {
     font-size: 15px;
   }

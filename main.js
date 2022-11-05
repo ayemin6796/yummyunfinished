@@ -1,15 +1,16 @@
 import "./style.scss";
 import { counterUp } from "counterup2";
 import ScrollReveal from "scrollreveal";
-import "bootstrap";
 import "venobox";
-import "slick-carousel";
 import "aos/dist/aos.css";
 import "isotope-layout";
 import "animate.css";
+import "bootstrap";
+import Swiper from "swiper/bundle";
 
 let backBtn = document.querySelector(".back-to-top");
 
+// slide up
 let slideUp = {
   distance: "65px",
   duration: 600,
@@ -315,3 +316,93 @@ window.addEventListener("scroll", function () {
 });
 // Btn Animation
 let mainBtn = document.querySelector(".main-btn");
+
+// For Testimonials
+$(".single-item").slick({
+  arrows: false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  speed: 820,
+  easing: "linear",
+  dots: true,
+});
+
+// For Events
+$(".event-slick").slick({
+  autoplay: true,
+  arrows: false,
+  infinite: true,
+  autoplaySpeed: 2500,
+  speed: 820,
+  loop: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  centerPadding: "50px",
+  easing: "linear",
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 1120,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 860,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+      },
+    },
+  ],
+});
+
+// for gallery
+new Swiper(".gal-swiper", {
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 5,
+  spaceBetween: 20,
+  centeredSlides: true,
+  keyboard: {
+    enabled: true,
+  },
+  breakpoints: {
+    1180: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+    660: {
+      slidesPerView: 3,
+    },
+    200: {
+      slidesPerView: 1,
+      // spaceBetween: 20,
+      slidesToShow: 1,
+      centeredSlides: false,
+    },
+  },
+});
+
+new VenoBox({
+  selector: ".my-link",
+});
+
+new VenoBox({
+  selector: ".gal-link",
+});
+
+new VenoBox({
+  selector: ".menu-gal",
+});

@@ -9,6 +9,8 @@ $font-family-sans-serif: "Inter", "Amatic SC", sans-serif;
 @import "./node_modules/animate.css/animate.min.css";
 @import "./node_modules/venobox/dist/venobox.min.css";
 @import "./node_modules/swiper/swiper.scss";
+@import "./node_modules/slick-carousel/slick/slick.scss";
+@import "./node_modules/slick-carousel/slick/slick-theme.scss";
 // ------------ default ---------------
 *,
 body {
@@ -326,7 +328,7 @@ body {
 }
 .slick-dots li button::before {
   color: #ce1212 !important;
-  font-size: 16px;
+  font-size: 50px;
 }
 
 // ------------ Events ----------------
@@ -386,15 +388,16 @@ body {
   overflow: hidden;
   transition: transform 0.2s linear, opacity 0.2s ease-in,
     transform 0.2s ease-in !important;
+  overflow: hidden !important;
 }
 .social {
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 3%;
-  right: -20%;
+  right: -9%;
   width: 44px;
-  display: none;
+  display: none !important;
   background-color: #dbdbdf88;
   backdrop-filter: blur(10px) contrast(130%);
   transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
@@ -405,11 +408,11 @@ body {
 .social a:hover i {
   opacity: 0.75 !important;
 }
-.chef:hover .social {
-  right: 5%;
-  display: block;
+.chef-main:hover .social {
+  right: 5% !important;
+  display: block !important;
 }
-.chef:hover {
+.chef-main:hover {
   transform: scale(1.03) !important;
 }
 .img-over {
@@ -728,6 +731,10 @@ body {
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 860px) {
+  .chef {
+    margin: 0 !important;
+    margin-bottom: 0px !important;
+  }
   // first hero section
   .first-left {
     text-align: center;
@@ -810,7 +817,7 @@ body {
   }
 
   // Chef
-  .chef {
+  .chef-main {
     margin-bottom: 20px !important;
     margin: 0px 3px;
   }
